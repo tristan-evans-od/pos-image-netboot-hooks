@@ -1,1 +1,1 @@
-# reteng-od-slepos-netboot-hooks
+# pos-image-netboot-hooks
