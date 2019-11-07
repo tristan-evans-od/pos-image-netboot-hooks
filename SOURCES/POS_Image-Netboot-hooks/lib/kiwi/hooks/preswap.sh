@@ -1,0 +1,1 @@
+createEncryptedSwapDevice $imageSwapDevice
