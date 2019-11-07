@@ -5,3 +5,7 @@ if [ -n "$FETCH_FILE_TEMP_DIR" ]; then
 fi
 
 openLUKSDevices
+
+# Log to the branch server that we are successful (TE)
+/etc/init.d/syslog start
+/usr/sbin/busybox logger -t "KIWI Imaging" "Success!" 
