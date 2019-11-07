@@ -1,4 +1,6 @@
-	#======================================
+	logToSyslog "The POS image deployment is preparing to load the KIWI configuration."
+    
+    #======================================
 	# Connection/access check for SERVER
 	#--------------------------------------
 	Echo "Checking for config file: config.$DHCPCHADDR"

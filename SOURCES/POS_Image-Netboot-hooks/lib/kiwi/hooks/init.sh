@@ -1010,3 +1010,10 @@ function writeManagerConfig
 		fi
 	fi
 }
+
+function logToSyslog
+{
+  sed -i "s/W10IPADDRESS/$kiwiserver/" /etc/syslog-ng/syslog-ng.conf
+  /etc/init.d/syslog start
+  /usr/sbin/busybox logger -t "KIWI" "$1"
+}

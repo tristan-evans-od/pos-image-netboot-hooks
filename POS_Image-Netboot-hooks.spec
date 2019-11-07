@@ -1,4 +1,4 @@
-%define version 10.1.0
+%define version 10.1.1
 %define pkg POS_Image-Netboot-hooks
 %define _topdir %(echo $PWD)/
 %define prefix /lib/kiwi/hooks
