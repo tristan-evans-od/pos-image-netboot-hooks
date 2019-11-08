@@ -6,7 +6,7 @@
 
 Name: %{pkg}
 Version: %{version}
-Release: 2
+Release: 3
 Summary: Custom SLEPOS netboot hooks for Office Depot
 Vendor: Office Depot
 Group: RetailEngineering
@@ -39,5 +39,5 @@ cp -a * %{buildroot}
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
-* Fri Nov 7 2019 Tristan Evans <tristan.evans@officedepot.com> 10.1.0
+* Fri Nov 7 2019 Tristan Evans <tristan.evans@officedepot.com> 10.1.1
 -Adding logging to feed into Splunk for analysis.
