@@ -6,7 +6,7 @@
 
 Name: %{pkg}
 Version: %{version}
-Release: 1
+Release: 2
 Summary: Custom SLEPOS netboot hooks for Office Depot
 Vendor: Office Depot
 Group: RetailEngineering
