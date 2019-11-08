@@ -1013,7 +1013,14 @@ function writeManagerConfig
 
 function logToSyslog
 {
-	sed -i "s/W10IPADDRESS/$kiwiserver/" /etc/syslog-ng/syslog-ng.conf
-	/etc/init.d/syslog start
-	/usr/bin/busybox logger -t "KIWI" "$1"
+	SYSLOG_CONF=/etc/syslog-ng/syslog-ng.conf
+	if [[ ! -z "$imageServer" ]]; then
+		grep $imageServer $SYSLOG_CONF &> /dev/null
+		[[ "$?" != "0" ]] && sed -i "s/W10IPADDRESS/$imageServer/" $SYSLOG_CONF
+		fetchFile KIWI/config.$DHCPCHADDR config.$DHCPCHADDR
+		ID=$(grep "POS_ID" config.$DHCPCHADDR | cut -d "=" -f 2)
+		hostname $ID
+		/etc/init.d/syslog start
+		/usr/bin/busybox logger -t "KIWI-Imaging" "$1"
+	fi
 }

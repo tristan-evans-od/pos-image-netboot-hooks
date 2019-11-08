@@ -1,3 +1,3 @@
 uploadLog
 
-logToSyslog "The POS image deployment process has failed!"
+logToSyslog "Failed to load environment for POS image: ${imageVersion}"

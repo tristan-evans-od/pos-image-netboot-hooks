@@ -1,5 +1,3 @@
-logToSyslog "The POS image deployment process is preparing to download the image."
-
 # call it unconditionally, it could block filesystem check and partitioning
 umountServicePartition
 

@@ -6,4 +6,4 @@ fi
 
 openLUKSDevices
 
-logToSyslog "The POS image deployment process was successful!" 
+logToSyslog "POS image has been successfully loaded: $imageVersion" 
