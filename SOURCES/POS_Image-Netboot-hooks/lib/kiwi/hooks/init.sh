@@ -1021,12 +1021,10 @@ function logToSyslog
 		ID=$(grep "POS_ID" config.$DHCPCHADDR | cut -d "=" -f 2)
 		W10=$(echo $ID | cut -d r -f1)w10
 		hostname $W10
-		# Setup timezone
 		fetchFile tz.dat tz.dat
 		TIMEZONE=$(cat ./tz.dat)
 		ln -s /usr/share/zoneinfo/$TIMEZONE /etc/localtime
 		sntp $imageServer
-		# Log message
 		/etc/init.d/syslog start
 		/usr/bin/busybox logger -t "KIWI-Imaging" "$1"
 	fi
